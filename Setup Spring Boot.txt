@@ -1,0 +1,30 @@
+-- SPRING BOOT --
+Spring merupakan framework Java yang mempermudah para programmer 
+dalam membuat sebuah aplikasi Java dengan menerapkan salah satunya 
+adalah design-patern : dependency-injection.
+
+FITUR:
+1. Depedency Injection
+2. Aspect Oriented Programming
+3. Spring MVC dan Restful Web Service
+4. Support koneksi database, dsb.
+
+BIKIN PROJECT
+0. start.spring.io
+1. Project > Maven
+2. Language > Java
+3. Spring boot > 2.5.2
+4. Project metadata (Parameter disi sesuai dengan keinginan kita)
+-- Group : com.example
+-- Artifact : demo
+-- Name : demo
+-- Description : Demo project for Spring Boot
+-- Package name : com.example.demo
+-- Packaging : JarWar
+-- Java : 16 (sesuai versi java di pc)
+5. Generate (jadi file zip)
+6. Buka eclipse
+7. buka file yang tadi setelah di ekstrak
+8. klik kanan folder run-as, klik 7. maven install (untuk download dependencies)
+-- Tunggu semua download depedencies selesai
+9. klik kanan folder run-as, klik 1. java application
