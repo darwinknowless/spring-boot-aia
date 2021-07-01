@@ -3,28 +3,69 @@ Spring merupakan framework Java yang mempermudah para programmer
 dalam membuat sebuah aplikasi Java dengan menerapkan salah satunya 
 adalah design-patern : dependency-injection.
 
-FITUR:
+-- FITUR:
 1. Depedency Injection
 2. Aspect Oriented Programming
 3. Spring MVC dan Restful Web Service
 4. Support koneksi database, dsb.
 
-BIKIN PROJECT
+-- BIKIN PROJECT
 0. start.spring.io
 1. Project > Maven
 2. Language > Java
 3. Spring boot > 2.5.2
 4. Project metadata (Parameter disi sesuai dengan keinginan kita)
 -- Group : com.example
--- Artifact : demo
+-- Artifact : demo //nama project
 -- Name : demo
 -- Description : Demo project for Spring Boot
 -- Package name : com.example.demo
 -- Packaging : JarWar
 -- Java : 16 (sesuai versi java di pc)
+
+-- ADD DEPENDENCIES
+-- 1. postgreSQL Driver
+-- 2. Springboot devtools
+-- 3. spring data JPA
+-- 4. Lombok
+
 5. Generate (jadi file zip)
 6. Buka eclipse
 7. buka file yang tadi setelah di ekstrak
 8. klik kanan folder run-as, klik 7. maven install (untuk download dependencies)
 -- Tunggu semua download depedencies selesai
 9. klik kanan folder run-as, klik 1. java application
+
+Jika error ke :
+-- application.properties (Configuration)
+folder src/main/resources/application.properties
+ke postGree/pgAdmin4 :
+create database : DB_LIBRARY
+
+# Database Config
+spring.datasource.url=jdbc:postgresql://localhost:5432/"nama db di postgre"
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+#spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Hibernate Config
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.default_schema=public
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=true
+
+server.error.include-stacktrace: never
+
+-- ADD DEPENDENCIES
+-- ke pom.xml (seperti package.json)
+-- bagian dependencies
+-- paste
+----<dependency>
+--------<groupId>org.springframework.boot</groupId>
+--------<artifactId>spring-boot-starter-web</artifactId>
+----</dependency>
+-- save
+-- run maven install
+

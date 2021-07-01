@@ -1,0 +1,23 @@
+--Working with Java Spring Boot Project--
+----> on src/main/java
+1. Right click :
+-------->> New => Package
+-------->> Example : -------->>.model
+
+2. Default folder must to follow
+-------->> Model : com.example.library.model
+	>> All Tables / Schemas Model create here
+-------->> Repo : com.example.library.repo
+	>> All Repository for Tables / Schemas Model create here
+-------->> controller : com.example.library.controller
+	>> Create API here
+-------->> payload : com.example.library.payload
+
+3. Running Program
+----> on src/main/java
+-------->> com.example.library
+-------->> LibraryApplication.java
+-------->> Run as Java Application/Programs
+
+
+

@@ -1,0 +1,84 @@
+--SETUP SPRING BOOT PROJECT--
+1. Spring initializr (go to : start.spring.io)
+---- setup Project : "Maven Project"
+---- setup Language : "Java"
+---- setup Spring Boot : "2.5.2"
+Project Metadata : 
+---- Group : "com.example" (default)
+---- Artifact : "[your project name]"
+---- Name : "[auto generate after your create Arifact]"
+---- Description : "Demo project for Spring Boot"
+---- Package name : "com.example.[auto generate after your create Arifact]" (leave it)
+---- Packaging : "[Jar/War]" (set "Jar")
+---- Java : "[16/11/8]" (set your JDK version)
+Add Dependencies :
+NOTE : freely add dependencies for your project needed
+After all complete :
+---- Click Generate (Automaticly Downloaded)
+---- Move & extract inside your folder project
+
+2. Open Eclipse IDE
+---- Open file/folder your exstract before
+---- Right click on that folder
+--------> Run as
+--------> Choose "7 Maven Install"
+--------> Wait after all dependencies downloaded
+--------> After success ("Builld Success")
+--------> Run as
+--------> Choose "1 Java Appilaction"
+--------> Run as
+--------> If error go to step 3
+
+3. Setting Configuration
+----> Go to src/main/resources
+----> Open application.properties
+----> Set your configuration here
+
+# Server port, example: 8090
+server.port=8090
+
+# Database Config
+spring.datasource.url=jdbc:postgresql://localhost:5432/<"your db name">
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+#spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Hibernate Config
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.default_schema=public
+
+# node, update, create
+spring.jpa.hibernate.ddl-auto=update [none, create, update]
+spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=true
+server.error.include-stacktrace: never
+spring.jackson.serialization.fail-on-empty-beans=false
+
+4. If you wanna add dependencies
+----> go to "pom.xml"
+----> go to dependencies section
+	<dependencies>
+		<dependencies>
+			//.....dependencies 1		
+		</dependencies>
+		----> PASTE your dependencies source code HERE <----
+		<dependencies>
+			//.....dependencies 		
+		</dependencies>
+	</dependencies>
+----> after that follow step no. 2
+---- Right click on that folder
+--------> Run as
+--------> Choose "7 Maven Install"
+--------> Wait after all dependencies downloaded
+--------> After success ("Builld Success")
+--------> Run as
+--------> Choose "1 Java Appilaction"
+--------> Run as
+
+
+
+
+
+
